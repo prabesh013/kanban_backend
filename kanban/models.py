@@ -1,11 +1,13 @@
 from django.db import models
+#from django.contrib.auth.models import User
 
 # Create your models here.
 
 
 class Board(models.Model):
     board_name = models.CharField(max_length=100)
-    # created_by
+    board_desc = models.CharField(max_length=200)
+    # created_by = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return str(self.board_name)
@@ -13,6 +15,7 @@ class Board(models.Model):
 
 class List(models.Model):
     list_name = models.CharField(max_length=100)
+    list_desc = models.CharField(max_length=200)
     board = models.ForeignKey(Board, on_delete=models.CASCADE)
 
     def __str__(self):
