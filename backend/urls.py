@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from kanban.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('kanban.urls')),
+    path('', index),
+    path('api_auth', include('rest_framework.urls')),
 ]
