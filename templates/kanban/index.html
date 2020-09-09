@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        div {
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p,
+        li {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>KANBAN BACKEND API</h1>
+    <div class="container">
+        <ol>
+            <li>Install the requirements: pip install -r requirements.txt</li>
+            <li>Create Database and Create various credentials information(User,Password) to work with Postgresql</li>
+            <li>Migrate the database:python manage.py migrate</li>
+            <li>For admin purpose Create Super User: python manage.py createsuperuser</li>
+        </ol>
+        <h2>Usage:</h2>
+        <p>/api/board ---> GET, POST</p>
+        <p>/api/board/{id} ---> GET, PUT, PATCH</p>
+
+        <p>/api/list ---> GET, POST</p>
+        <p>/api/list/{id} ---> GET, PUT, PATCH</p>
+
+        <p>/api/card ---> GET, POST</p>
+        <p>api/card/{id} ---> GET, PUT, PATCH</p>
+
+
+    </div>
+</body>
+
+</html>
